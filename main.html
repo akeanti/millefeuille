@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:title" content="Millefeuille">
+    <meta property="og:description" content="Millefeuille, a dev, I eat leetcode and want learn more every sec...">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1275150549695860807/1350267772164116583/st_small_507x507-pad_600x600_f8f8f8-removebg-preview.png?ex=67d61e5b&is=67d4ccdb&hm=513bb84420be828ea447eefc3574aefa4d745d7030edfbe4082f3dcbc5189819&=&format=webp&quality=lossless&width=750&height=750">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Millefeuille Dev</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="particle-container" id="particleContainer"></div>
+    
+    <!-- Audio Player -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <div class="music-control" id="musicControl">
+        <i class="fas fa-music"></i>
+    </div>
+
+    <!-- Main Profile Section -->
+    <div class="main-profile">
+        <div class="profile-banner">
+            <img src="banner.jpg" alt="Profile Banner" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="profile-picture">
+            <img src="av.gif" alt="Profile Picture" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+        </div>
+        
+        <div class="profile-info">
+            <h1 class="profile-name">MilleFeuille</h1>
+            <p class="profile-title">Full Stack Developer | IoT Educator | Ethical Hacker</p>
+            
+            <p class="typing-bio">
+                Passionate developer with expertise in full-stack development, Arduino programming, 
+                ethical hacking.
+            </p>
+            
+            <div class="skill-badges">
+                <div class="skill-badge" data-skill="fullstack">
+                    <i class="fas fa-laptop-code"></i> Full Stack Development
+                </div>
+                <div class="skill-badge" data-skill="arduino">
+                    <i class="fas fa-microchip"></i> Arduino Programming
+                </div>
+                <div class="skill-badge" data-skill="hacking">
+                    <i class="fas fa-shield-alt"></i> Ethical Hacking
+                </div>
+                <div class="skill-badge" data-skill="leetcode">
+                    <i class="fas fa-brain"></i> LeetCode
+                </div>
+                <div class="skill-badge" data-skill="bounty">
+                    <i class="fas fa-bug"></i> Bounty Hunting
+                </div>
+                <div class="skill-badge" data-skill="math">
+                    <i class="fas fa-calculator"></i> Mathematics
+                </div>
+                <div class="skill-badge" data-skill="teaching">
+                    <i class="fas fa-chalkboard-teacher"></i> Teaching
+                </div>
+                <div class="skill-badge" data-skill="design">
+                    <i class="fas fa-palette"></i> UI/UX Design
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/akeanti" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-hackerrank"></i></a>
+            </div>
+        </div>
+        
+        <div class="pastry-decoration"></div>
+    </div>
+
+    <!-- Additional Sections -->
+    <div class="additional-sections">
+        <!-- Projects Section -->
+        <div class="section-card">
+            <h3 class="section-title">Projects</h3>
+            <div class="project-card">
+                <h4 class="project-title">Smart Home Automation</h4>
+                <p class="project-description">IoT-based home automation system using Arduino and Node-RED.</p>
+            </div>
+            <div class="project-card">
+                <h4 class="project-title">LeetCode Dashboard</h4>
+                <p class="project-description">Custom dashboard to track LeetCode progress and performance.</p>
+            </div>
+            <div class="project-card">
+                <h4 class="project-title">Ethical Hacking Toolkit</h4>
+                <p class="project-description">Collection of tools for penetration testing and vulnerability assessment.</p>
+            </div>
+            <div class="project-card">
+                <h4 class="project-title">Memory Game</h4>
+                <p class="project-description">Interactive memory matching game with multiple difficulty levels.</p>
+            </div>
+            <div class="project-card">
+                <h4 class="project-title">Portfolio Website</h4>
+                <p class="project-description">Personal portfolio showcasing projects, skills, and achievements.</p>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="section-card">
+            <h3 class="section-title">Achievements</h3>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                <div class="achievement-info">
+                    <h4>Top 5% on LeetCode</h4>
+                    <p>Solved 300+ problems with efficient algorithms</p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="achievement-info">
+                    <h4>Arduino Educator</h4>
+                    <p>Teaching IoT development to 100+ students</p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fas fa-bug"></i></div>
+                <div class="achievement-info">
+                    <h4>Bounty Hunter</h4>
+                    <p>Discovered 20+ critical vulnerabilities</p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+                <div class="achievement-info">
+                    <h4>Certifications</h4>
+                    <p>AWS Certified Developer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="section-card">
+            <h3 class="section-title">Testimonials</h3>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Your work on our IoT project was exceptional! The Arduino integration was seamless and your teaching approach helped our team learn quickly.</p>
+                <p class="testimonial-author">- Jane Doe, Tech Lead</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">I've never seen someone solve algorithm problems so efficiently. Your LeetCode solutions are a valuable resource for our team.</p>
+                <p class="testimonial-author">- John Smith, CTO</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">The memory game you developed for our educational platform has been incredibly engaging for our users and has helped improve their memory skills.</p>
+                <p class="testimonial-author">- Sarah Johnson, Educational Platform Manager</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section-card">
+            <h3 class="section-title">Contact</h3>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Blog Section -->
+        <div class="section-card">
+            <h3 class="section-title">Blog</h3>
+            <div class="blog-card">
+                <h4 class="blog-title">Mastering Arduino for Beginners</h4>
+                <p class="blog-preview">A comprehensive guide to getting started with Arduino programming and hardware.</p>
+            </div>
+            <div class="blog-card">
+                <h4 class="blog-title">LeetCode Patterns You Need to Know</h4>
+                <p class="blog-preview">Common patterns that appear frequently in LeetCode problems and how to solve them.</p>
+            </div>
+            <div class="blog-card">
+                <h4 class="blog-title">Ethical Hacking 101</h4>
+                <p class="blog-preview">Introduction to ethical hacking principles and how to get started in the field.</p>
+            </div>
+            <div class="blog-card">
+                <h4 class="blog-title">Building Interactive Web Games</h4>
+                <p class="blog-preview">Learn how to create engaging web-based games using HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
+
+        <!-- Technical Skills Section -->
+        <div class="section-card">
+            <h3 class="section-title">Technical Skills</h3>
+            <div class="skill-container">
+                <div class="skill-name">JavaScript</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-name">Python</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-name">C/C++</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-name">React</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-name">Node.js</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-name">HTML/CSS</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 95%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memory Matching Game Section -->
+        <div class="section-card">
+            <h3 class="section-title">Fun Games</h3>
+            <div class="game-section">
+                <h4 class="game-title">Memory Matching Game</h4>
+                <div class="level-selector">
+                    <button class="level-btn" data-level="easy">Easy</button>
+                    <button class="level-btn" data-level="medium">Medium</button>
+                    <button class="level-btn" data-level="hard">Hard</button>
+                </div>
+                <div class="game-message" id="gameMessage"></div>
+                <div class="game-container" id="gameContainer"></div>
+                <div class="game-stats">
+                    <span>Moves: <span id="moves">0</span></span>
+                    <span>Level: <span id="currentLevel">Easy</span></span>
+                </div>
+            </div>
+    </div>
+    <div class="section-card">
+            
+            <!-- Number Guessing Game -->
+            <div class="guessing-game">
+                <h4 class="game-title">Number Guessing Game</h4>
+                <div class="attempts-display">
+                    Attempts remaining: <span id="attempts">5</span>
+                </div>
+                <div class="game-input">
+                    <input type="number" id="guessInput" min="1" max="100" placeholder="Enter a number">
+                    <button id="guessBtn">Guess</button>
+                </div>
+                <div class="game-status" id="gameStatus"></div>
+                <div class="game-buttons">
+                    <button id="newGameBtn">New Game</button>
+                    <button id="hintBtn">Get Hint</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Color Palette Section -->
+    <div class="color-palette">
+        <div class="color-sample" style="background: var(--pastry-cream)"></div>
+        <div class="color-sample" style="background: var(--pastry-crust)"></div>
+        <div class="color-sample" style="background: var(--pastry-layer)"></div>
+        <div class="color-sample" style="background: var(--pastry-shadow)"></div>
+        <div class="color-sample" style="background: var(--pastry-red)"></div>
+        <div class="color-sample" style="background: var(--pastry-green)"></div>
+        <div class="color-sample" style="background: var(--pastry-blue)"></div>
+    </div>
+
+    <!-- Popup for Skill Details -->
+    <div class="popup" id="skillPopup">
+        <div class="popup-header">
+            <h3 class="popup-title" id="popupTitle">Skill Details</h3>
+            <button class="popup-close" id="popupClose">&times;</button>
+        </div>
+        <div class="popup-content" id="popupContent">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Akeanti. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Background music control
+        const musicControl = document.getElementById('musicControl');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+
+        musicControl.addEventListener('click', function() {
+            if (isPlaying) {
+                bgMusic.pause();
+                this.classList.remove('paused');
+            } else {
+                bgMusic.play();
+                this.classList.add('paused');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Skill badge click handlers
+        const skillBadges = document.querySelectorAll('.skill-badge');
+        const popup = document.getElementById('skillPopup');
+        const popupContent = document.getElementById('popupContent');
+        const popupTitle = document.getElementById('popupTitle');
+        const popupClose = document.getElementById('popupClose');
+
+        skillBadges.forEach(badge => {
+            badge.addEventListener('click', function() {
+                const skill = this.getAttribute('data-skill');
+                
+                // Create content based on the skill
+                let content = '';
+                let title = '';
+                
+                switch(skill) {
+                    case 'fullstack':
+                        title = 'Full Stack Development';
+                        content = `
+                            <p>Proficient in building complete web applications from frontend to backend.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                            <p>Technologies: React, Node.js, MongoDB, Python</p>
+                            <p>Experience: 3+ years</p>
+                        `;
+                        break;
+                    case 'arduino':
+                        title = 'Arduino Programming';
+                        content = `
+                            <p>Experienced in creating IoT devices and teaching Arduino development.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                            <p>Projects: 50+ smart devices</p>
+                            <p>Students taught: 100+</p>
+                        `;
+                        break;
+                    case 'hacking':
+                        title = 'Ethical Hacking';
+                        content = `
+                            <p>Skilled in penetration testing and vulnerability assessment.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                            <p>Certifications: CEH, OSCP</p>
+                            <p>Bounties earned: 20+</p>
+                        `;
+                        break;
+                    case 'leetcode':
+                        title = 'LeetCode Problem Solving';
+                        content = `
+                            <p>Solved over 300 problems with efficient algorithms.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 95%"></div>
+                            </div>
+                            <p>Rank: Top 5%</p>
+                            <p>Favorite languages: JavaScript, Python</p>
+                        `;
+                        break;
+                    case 'bounty':
+                        title = 'Bounty Hunting';
+                        content = `
+                            <p>Discovered and reported critical vulnerabilities for major companies.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                            <p>Platforms: HackerOne, Bugcrowd</p>
+                            <p>Total earnings: $15,000+</p>
+                        `;
+                        break;
+                    case 'math':
+                        title = 'Mathematics';
+                        content = `
+                            <p>Strong foundation in algorithms and data structures.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                            <p>Specializations: Discrete math, calculus</p>
+                            <p>Competitions: Top 10% in national contests</p>
+                        `;
+                        break;
+                    case 'teaching':
+                        title = 'Teaching';
+                        content = `
+                            <p>Passionate about sharing knowledge with others.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                            <p>Subjects: Arduino, JavaScript, Algorithms</p>
+                            <p>Platforms: Online courses, workshops</p>
+                        `;
+                        break;
+                    case 'design':
+                        title = 'UI/UX Design';
+                        content = `
+                            <p>Creating intuitive and visually appealing interfaces.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                            <p>Tools: Figma, Adobe XD</p>
+                            <p>Projects: 30+ designed applications</p>
+                        `;
+                        break;
+                }
+                
+                popupTitle.textContent = title;
+                popupContent.innerHTML = content;
+                popup.classList.add('active');
+            });
+        });
+        
+        // Close popup when clicking the close button
+        popupClose.addEventListener('click', function() {
+            popup.classList.remove('active');
+        });
+        
+        // Close popup when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === popup) {
+                popup.classList.remove('active');
+            }
+        });
+        
+        // Contact form submission
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form submission logic would go here
+            alert('Message sent successfully!');
+            contactForm.reset();
+        });
+        
+        // Create particles for background animation
+        const particleContainer = document.getElementById('particleContainer');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.setProperty('--x', Math.random());
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.animationDuration = `${3 + Math.random() * 5}s`;
+            particle.style.animationDelay = `${Math.random() * 3}s`;
+            particleContainer.appendChild(particle);
+        }
+
+        // Memory Matching Game
+        const gameContainer = document.getElementById('gameContainer');
+        const gameMessage = document.getElementById('gameMessage');
+        const movesDisplay = document.getElementById('moves');
+        const currentLevelDisplay = document.getElementById('currentLevel');
+        
+        let cards = [];
+        let flippedCards = [];
+        let matchedPairs = 0;
+        let moves = 0;
+        let isProcessing = false;
+        
+        // Icons for the game cards
+        const icons = [
+            'fas fa-laptop-code', 'fas fa-microchip', 'fas fa-shield-alt', 
+            'fas fa-brain', 'fas fa-bug', 'fas fa-calculator', 
+            'fas fa-chalkboard-teacher', 'fas fa-palette'
+        ];
+        
+        // Level configurations
+        const levelConfigs = {
+            'easy': { pairs: 4, cardHeight: '150px' },
+            'medium': { pairs: 6, cardHeight: '150px' },
+            'hard': { pairs: 8, cardHeight: '150px' }
+        };
+        
+        let currentLevel = 'easy';
+        
+        // Initialize the game
+        function initGame(level) {
+            currentLevel = level || currentLevel;
+            const config = levelConfigs[currentLevel];
+            
+            // Reset game state
+            cards = [];
+            flippedCards = [];
+            matchedPairs = 0;
+            moves = 0;
+            isProcessing = false;
+            movesDisplay.textContent = moves;
+            currentLevelDisplay.textContent = currentLevel.charAt(0).toUpperCase() + currentLevel.slice(1);
+            gameMessage.textContent = '';
+            gameContainer.innerHTML = '';
+            
+            // Create card pairs
+            let cardPairs = [...icons.slice(0, config.pairs), ...icons.slice(0, config.pairs)];
+            
+            // Shuffle cards
+            for (let i = cardPairs.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cardPairs[i], cardPairs[j]] = [cardPairs[j], cardPairs[i]];
+            }
+            
+            // Create card elements
+            cardPairs.forEach((icon, index) => {
+                const card = document.createElement('div');
+                card.classList.add('game-card');
+                card.dataset.icon = icon;
+                card.dataset.index = index;
+                card.style.height = config.cardHeight;
+                
+                const iconElement = document.createElement('i');
+                iconElement.className = icon;
+                card.appendChild(iconElement);
+                
+                card.addEventListener('click', flipCard);
+                gameContainer.appendChild(card);
+                cards.push(card);
+            });
+        }
+        
+        // Card flip handler
+        function flipCard() {
+            if (isProcessing) return;
+            if (this.classList.contains('flipped') || this.classList.contains('matched')) return;
+            
+            this.classList.add('flipped');
+            flippedCards.push(this);
+            
+            if (flippedCards.length === 2) {
+                isProcessing = true;
+                moves++;
+                movesDisplay.textContent = moves;
+                
+                const card1 = flippedCards[0];
+                const card2 = flippedCards[1];
+                
+                if (card1.dataset.icon === card2.dataset.icon) {
+                    // Match found
+                    card1.classList.add('matched');
+                    card2.classList.add('matched');
+                    flippedCards = [];
+                    isProcessing = false;
+                    matchedPairs++;
+                    
+                    if (matchedPairs === levelConfigs[currentLevel].pairs) {
+                        gameMessage.textContent = `Congratulations! You completed the ${currentLevel} level in ${moves} moves!`;
+                    }
+                } else {
+                    // No match
+                    setTimeout(() => {
+                        card1.classList.remove('flipped');
+                        card2.classList.remove('flipped');
+                        flippedCards = [];
+                        isProcessing = false;
+                    }, 1000);
+                }
+            }
+        }
+        
+        // Level selection
+        const levelButtons = document.querySelectorAll('.level-btn');
+        levelButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.dataset.level;
+                currentLevelDisplay.textContent = level.charAt(0).toUpperCase() + level.slice(1);
+                initGame(level);
+                
+                // Update active button state
+                levelButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Initialize the game when the page loads
+        window.addEventListener('load', function() {
+            initGame();
+            levelButtons[0].classList.add('active');
+        });
+
+        // Number Guessing Game
+        let randomNumber;
+        let attempts;
+        let gameActive = false;
+
+        function startNewGame() {
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+            attempts = 5;
+            gameActive = true;
+            
+            document.getElementById('attempts').textContent = attempts;
+            document.getElementById('gameStatus').textContent = '';
+            document.getElementById('guessInput').value = '';
+            document.getElementById('guessInput').disabled = false;
+            document.getElementById('guessBtn').disabled = false;
+        }
+
+        function checkGuess() {
+            if (!gameActive) return;
+            
+            const guessInput = document.getElementById('guessInput');
+            const gameStatus = document.getElementById('gameStatus');
+            const guess = parseInt(guessInput.value);
+            
+            if (isNaN(guess) || guess < 1 || guess > 100) {
+                gameStatus.textContent = 'Please enter a valid number between 1 and 100';
+                gameStatus.className = 'game-status error';
+                return;
+            }
+            
+            attempts--;
+            document.getElementById('attempts').textContent = attempts;
+            
+            if (guess === randomNumber) {
+                gameStatus.textContent = `Congratulations! You guessed the number ${randomNumber} correctly!`;
+                gameStatus.className = 'game-status success';
+                gameActive = false;
+                document.getElementById('guessInput').disabled = true;
+                document.getElementById('guessBtn').disabled = true;
+            } else if (guess < randomNumber) {
+                gameStatus.textContent = 'Try a higher number!';
+                gameStatus.className = 'game-status error';
+            } else {
+                gameStatus.textContent = 'Try a lower number!';
+                gameStatus.className = 'game-status error';
+            }
+            
+            if (attempts === 0 && gameActive) {
+                gameStatus.textContent = `Game over! The number was ${randomNumber}.`;
+                gameStatus.className = 'game-status error';
+                gameActive = false;
+                document.getElementById('guessInput').disabled = true;
+                document.getElementById('guessBtn').disabled = true;
+            }
+        }
+
+        function getHint() {
+            if (!gameActive || attempts <= 0) return;
+            
+            const hint = randomNumber > 50 ? 'The number is higher than 50' : 'The number is lower than or equal to 50';
+            document.getElementById('gameStatus').textContent = hint;
+            document.getElementById('gameStatus').className = 'game-status';
+            attempts--;
+            document.getElementById('attempts').textContent = attempts;
+        }
+
+        // Event listeners for number guessing game
+        document.getElementById('guessBtn').addEventListener('click', checkGuess);
+        document.getElementById('guessInput').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                checkGuess();
+            }
+        });
+        document.getElementById('newGameBtn').addEventListener('click', startNewGame);
+        document.getElementById('hintBtn').addEventListener('click', getHint);
+        
+        // Start the first game automatically
+        window.addEventListener('load', startNewGame);
+    </script>
+</body>
+</html>
