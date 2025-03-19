@@ -746,3 +746,350 @@ footer {
 .game-buttons button:hover {
     background: var(--pastry-red);
 }
+/* Modified CSS for the vertical task bar */
+.vertical-task-bar {
+    position: fixed;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(245, 230, 211, 0.95);
+    border: 1px solid #d4af37;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .vertical-task-bar {
+        position: fixed;
+        top: 2px;
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+        width: 90%; /* Allow width to adjust based on content */
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgba(245, 230, 211, 0.95);
+        border-radius: 20px; /* Added rounded corners */
+        border: 1px solid #d4af37;
+        padding: 10px 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow for floating effect */
+        gap: 15px;
+        z-index: 1000;
+    }
+    
+    .task-bar-item {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+    .task-bar-tooltip {
+        display: none !important; /* Ensure tooltips are hidden on mobile */
+    }
+}
+
+.task-bar-item {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #f5e6d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+
+.task-bar-item:hover {
+    transform: scale(1.1);
+    border-color: #d4af37;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-bar-item i {
+    color: #d4af37;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.task-bar-item:hover i {
+    transform: rotate(45deg);
+    color: #b79a6c;
+}
+
+/* Restored tooltip functionality for larger screens */
+.task-bar-tooltip {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.8rem;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+}
+
+.task-bar-item:hover .task-bar-tooltip {
+    opacity: 1;
+}
+
+#advancedHackerModeOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    z-index: 9999;
+  }
+
+  .hacker-container {
+    position: absolute;
+    width: 900px;
+    height: 650px;
+    border: 2px solid #0f0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    font-family: 'Courier New', monospace;
+    color: #0f0;
+    box-shadow: 0 0 20px #0f0;
+  }
+
+  .title-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: #2c2c2c;
+    color: #0f0;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-bottom: 1px solid #0f0;
+  }
+
+  .terminal-content {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 65%;
+    height: calc(100% - 30px);
+    overflow-y: auto;
+    white-space: pre;
+    padding: 10px;
+    background-color: black;
+  }
+
+  .command-prompt {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #0f0;
+  }
+
+  .network-map, .system-monitor, .hacking-tools {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    border: 1px solid #0f0;
+    background-color: black;
+    color: #0f0;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .network-map {
+    top: 20px;
+    right: 20px;
+  }
+
+  .system-monitor {
+    top: 220px;
+    right: 20px;
+  }
+
+  .hacking-tools {
+    bottom: 20px;
+    right: 20px;
+    height: 150px;
+  }
+
+  .glitch-border {
+    border: 2px solid #0f0;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+  }
+
+  .glitch-border::before, .glitch-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #0c0;
+    animation: glitch 2s infinite;
+  }
+
+  .glitch-border::after {
+    animation-delay: 1s;
+  }
+
+  @keyframes glitch {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(2px, 0); }
+    50% { transform: translate(-2px, 0); }
+    75% { transform: translate(2px, 0); }
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    background-color: #0f0;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+
+          /* Discord Server Specific Styles */
+          .server-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: var(--pastry-cream);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            color: var(--pastry-crust);
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: var(--pastry-shadow);
+            margin-top: 5px;
+        }
+
+        .discord-widget {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .discord-widget h3 {
+            color: var(--pastry-crust);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--pastry-crust);
+            padding-bottom: 10px;
+        }
+
+        .invite-button {
+            background: var(--pastry-crust);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .invite-button:hover {
+            background: var(--pastry-red);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        .channel-list {
+            margin-top: 20px;
+        }
+
+        .channel-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: all 0.2s;
+        }
+
+        .channel-item:hover {
+            background: var(--pastry-cream);
+            transform: translateX(5px);
+        }
+
+        .channel-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            color: var(--pastry-crust);
+        }
+
+        .channel-name {
+            color: var(--pastry-shadow);
+        }
+
+        .highlighted {
+            background: var(--pastry-cream);
+            border-left: 3px solid var(--pastry-crust);
+        }
+
+        /* Discord Widget Integration */
+        .discord-widget-container {
+            width: 100%;
+            height: 300px;
+            max-width: 600px;
+            aspect-ratio: 4/1;
+            background: #36393F;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .discord-widget-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }

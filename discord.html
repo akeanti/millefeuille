@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Millefeuille Discord Server">
+    <meta property="og:description" content="Join the Millefeuille Discord server - a community for developers, problem solvers, and tech enthusiasts">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1275150549695860807/1350267772164116583/st_small_507x507-pad_600x600_f8f8f8-removebg-preview.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Millefeuille Discord Server</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particle-container" id="particleContainer"></div>
+    
+    <!-- Audio Player -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <div class="music-control" id="musicControl">
+        <i class="fas fa-music"></i>
+    </div>
+
+    <!-- Modified Vertical Task Bar -->
+    <div class="vertical-task-bar">
+        <!-- Home -->
+        <div class="task-bar-item">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                <div class="task-bar-tooltip">
+                    <p>Home</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Discord -->
+        <div class="task-bar-item">
+            <a href="discord.html">
+                <i class="fab fa-discord"></i>
+                <div class="task-bar-tooltip">
+                    <p>Discord: r/millefeuille</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Reddit -->
+        <div class="task-bar-item">
+            <a href="reddit.html">
+                <i class="fab fa-reddit-alien"></i>
+                <div class="task-bar-tooltip">
+                    <p>Reddit: r/millefeuille</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Projects Timeline -->
+        <div class="task-bar-item">
+            <a href="projects-timeline.html">
+                <i class="fas fa-project-diagram"></i>
+                <div class="task-bar-tooltip">
+                    <p>Projects Timeline</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- My Story -->
+        <div class="task-bar-item">
+            <a href="my-story.html">
+                <i class="fas fa-scroll"></i>
+                <div class="task-bar-tooltip">
+                    <p>My Story</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Buy Me a Millefeuille -->
+        <div class="task-bar-item">
+            <a href="buy-me-a-millefeuille.html">
+                <i class="fas fa-coffee"></i>
+                <div class="task-bar-tooltip">
+                    <p>Buy Me a Millefeuille</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Profile Section -->
+    <div class="main-profile">
+        <div class="profile-banner">
+            <img src="banner.jpg" alt="Millefeuille Discord Server Banner" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="profile-picture">
+            <img src="av.gif" alt="Millefeuille Discord Server Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+        </div>
+        
+        <div class="profile-info">
+            <h1 class="profile-name">Millefeuille Discord Server</h1>
+            <p class="profile-title">A Community for Developers, Problem Solvers, and Tech Enthusiasts</p>
+            
+            <p class="typing-bio">
+                Join our growing community of passionate developers, problem solvers, minecrafters and more.
+            </p>
+            
+            <div class="server-stats">
+                <div class="stat-card">
+                    <div class="stat-number">1.2k</div>
+                    <div class="stat-label">Members</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Activity</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Channels</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2020</div>
+                    <div class="stat-label">Founded</div>
+                </div>
+            </div>
+            
+            <a href="#" class="invite-button">Join Our Discord Server</a>
+            
+            <div class="social-links">
+                <a href="https://github.com/akeanti" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-reddit-alien"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+            </div>
+        </div>
+        
+        <div class="pastry-decoration"></div>
+    </div>
+
+    <!-- Additional Sections -->
+    <div class="additional-sections">
+        <!-- Why Join Section -->
+        <div class="section-card">
+            <h3 class="section-title">Why Join?</h3>
+            <div class="project-card">
+                <h4 class="project-title">Collaborative Learning Environment</h4>
+                <p class="project-description">Learn from experienced developers and help others on their journey.</p>
+            </div>
+            <div class="project-card">
+                <h4 class="project-title">Problem Solving Challenges</h4>
+                <p class="project-description">Daily coding challenges and problem-solving sessions to sharpen your skills.</p>
+            </div>
+            <div class="project-card">
+                <h4 class="project-title">Project Collaboration</h4>
+                <p class="project-description">Find team members for your next big project or contribute to ongoing community projects.</p>
+            </div>
+            <div class="project-card">
+                <h4 class="project-title">Career Opportunities</h4>
+                <p class="project-description">Network with professionals in the industry and discover job opportunities.</p>
+            </div>
+        </div>
+
+        <!-- Discord Widget Section -->
+        <div class="section-card discord-widget">
+            <h3 class="section-title">Discord Server Preview</h3>
+            <p>Get a glimpse of our active community before joining:</p>
+            <div class="channel-list">
+                <div class="channel-item">
+                    <i class="fas fa-hashtag channel-icon"></i>
+                    <span class="channel-name">general-chat</span>
+                </div>
+                <div class="channel-item">
+                    <i class="fas fa-code channel-icon"></i>
+                    <span class="channel-name">coding-help</span>
+                </div>
+                <div class="channel-item">
+                    <i class="fas fa-brain channel-icon"></i>
+                    <span class="channel-name">problem-solving</span>
+                </div>
+                <div class="channel-item">
+                    <i class="fas fa-tools channel-icon"></i>
+                    <span class="channel-name">tech-support</span>
+                </div>
+                <div class="channel-item">
+                    <i class="fas fa-gamepad channel-icon"></i>
+                    <span class="channel-name">gaming</span>
+                </div>
+                <div class="channel-item highlighted">
+                    <i class="fas fa-coffee channel-icon"></i>
+                    <span class="channel-name">lounge</span>
+                </div>
+                <div class="channel-item">
+                    <i class="fas fa-bullhorn channel-icon"></i>
+                    <span class="channel-name">announcements</span>
+                </div>
+                <div class="channel-item">
+                    <i class="fas fa-music channel-icon"></i>
+                    <span class="channel-name">music</span>
+                </div>
+            </div>
+            <a href="#" class="invite-button" style="margin-top: 20px;">Join Now</a>
+
+        </div>
+
+        <!-- Community Highlights Section -->
+        <div class="section-card">
+            <h3 class="section-title">Community Highlights</h3>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                <div class="achievement-info">
+                    <h4>Weekly Coding Contests</h4>
+                    <p>Compete with other members to solve challenging problems and win prizes.</p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="achievement-info">
+                    <h4>Educational Workshops</h4>
+                    <p>Regular workshops on various tech topics led by community experts.</p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fas fa-bug"></i></div>
+                <div class="achievement-info">
+                    <h4>Bounty Hunting</h4>
+                    <p>Collaborate on finding and reporting vulnerabilities in various projects.</p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+                <div class="achievement-info">
+                    <h4>Certification Preparation</h4>
+                    <p>Study groups for popular tech certifications like AWS, CEH, and OSCP.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="section-card">
+            <h3 class="section-title">Widget</h3>
+                <div class="discord-widget-container">
+                    <iframe src="https://discord.com/widget?id=1211038749195239434&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section-card">
+            <h3 class="section-title">Contact</h3>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Blog Section -->
+        <div class="section-card">
+            <h3 class="section-title">Blog</h3>
+            <div class="blog-card">
+                <h4 class="blog-title">Getting Started with Competitive Programming</h4>
+                <p class="blog-preview">A comprehensive guide to starting your journey in competitive programming and problem solving.</p>
+            </div>
+            <div class="blog-card">
+                <h4 class="blog-title">How to Contribute to Open Source</h4>
+                <p class="blog-preview">Learn the best practices for contributing to open source projects and making your mark in the developer community.</p>
+            </div>
+            <div class="blog-card">
+                <h4 class="blog-title">Building Your First Discord Bot</h4>
+                <p class="blog-preview">Step-by-step tutorial to create your own Discord bot using JavaScript or Python.</p>
+            </div>
+        </div>
+
+    <!-- Color Palette Section -->
+    <div class="color-palette">
+        <div class="color-sample" style="background: var(--pastry-cream)"></div>
+        <div class="color-sample" style="background: var(--pastry-crust)"></div>
+        <div class="color-sample" style="background: var(--pastry-layer)"></div>
+        <div class="color-sample" style="background: var(--pastry-shadow)"></div>
+        <div class="color-sample" style="background: var(--pastry-red)"></div>
+        <div class="color-sample" style="background: var(--pastry-green)"></div>
+        <div class="color-sample" style="background: var(--pastry-blue)"></div>
+    </div>
+
+    <!-- Popup for Skill Details -->
+    <div class="popup" id="skillPopup">
+        <div class="popup-header">
+            <h3 class="popup-title" id="popupTitle">Skill Details</h3>
+            <button class="popup-close" id="popupClose">&times;</button>
+        </div>
+        <div class="popup-content" id="popupContent">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Millefeuille Discord Server. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Background music control
+        const musicControl = document.getElementById('musicControl');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+
+        musicControl.addEventListener('click', function() {
+            if (isPlaying) {
+                bgMusic.pause();
+                this.classList.remove('paused');
+            } else {
+                bgMusic.play();
+                this.classList.add('paused');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Skill badge click handlers
+        const skillBadges = document.querySelectorAll('.skill-badge');
+        const popup = document.getElementById('skillPopup');
+        const popupContent = document.getElementById('popupContent');
+        const popupTitle = document.getElementById('popupTitle');
+        const popupClose = document.getElementById('popupClose');
+
+        skillBadges.forEach(badge => {
+            badge.addEventListener('click', function() {
+                const skill = this.getAttribute('data-skill');
+                
+                // Create content based on the skill
+                let content = '';
+                let title = '';
+                
+                switch(skill) {
+                    case 'fullstack':
+                        title = 'Full Stack Development';
+                        content = `
+                            <p>Proficient in building complete web applications from frontend to backend.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                            <p>Technologies: React, Node.js, MongoDB, Python</p>
+                            <p>Experience: 3+ years</p>
+                        `;
+                        break;
+                    case 'arduino':
+                        title = 'Arduino Programming';
+                        content = `
+                            <p>Experienced in creating IoT devices and teaching Arduino development.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                            <p>Projects: 50+ smart devices</p>
+                            <p>Students taught: 100+</p>
+                        `;
+                        break;
+                    case 'hacking':
+                        title = 'Ethical Hacking';
+                        content = `
+                            <p>Skilled in penetration testing and vulnerability assessment.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                            <p>Certifications: CEH, OSCP</p>
+                            <p>Bounties earned: 20+</p>
+                        `;
+                        break;
+                    case 'leetcode':
+                        title = 'LeetCode Problem Solving';
+                        content = `
+                            <p>Solved over 300 problems with efficient algorithms.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 95%"></div>
+                            </div>
+                            <p>Rank: Top 5%</p>
+                            <p>Favorite languages: JavaScript, Python</p>
+                        `;
+                        break;
+                    case 'bounty':
+                        title = 'Bounty Hunting';
+                        content = `
+                            <p>Discovered and reported critical vulnerabilities for major companies.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                            <p>Platforms: HackerOne, Bugcrowd</p>
+                            <p>Total earnings: $15,000+</p>
+                        `;
+                        break;
+                    case 'math':
+                        title = 'Mathematics';
+                        content = `
+                            <p>Strong foundation in algorithms and data structures.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                            <p>Specializations: Discrete math, calculus</p>
+                            <p>Competitions: Top 10% in national contests</p>
+                        `;
+                        break;
+                    case 'teaching':
+                        title = 'Teaching';
+                        content = `
+                            <p>Passionate about sharing knowledge with others.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                            <p>Subjects: Arduino, JavaScript, Algorithms</p>
+                            <p>Platforms: Online courses, workshops</p>
+                        `;
+                        break;
+                    case 'design':
+                        title = 'UI/UX Design';
+                        content = `
+                            <p>Creating intuitive and visually appealing interfaces.</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                            <p>Tools: Figma, Adobe XD</p>
+                            <p>Projects: 30+ designed applications</p>
+                        `;
+                        break;
+                }
+                
+                popupTitle.textContent = title;
+                popupContent.innerHTML = content;
+                popup.classList.add('active');
+            });
+        });
+        
+        // Close popup when clicking the close button
+        popupClose.addEventListener('click', function() {
+            popup.classList.remove('active');
+        });
+        
+        // Close popup when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === popup) {
+                popup.classList.remove('active');
+            }
+        });
+        
+        // Contact form submission
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form submission logic would go here
+            alert('Message sent successfully!');
+            contactForm.reset();
+        });
+        
+        // Create particles for background animation
+        const particleContainer = document.getElementById('particleContainer');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.setProperty('--x', Math.random());
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.animationDuration = `${3 + Math.random() * 5}s`;
+            particle.style.animationDelay = `${Math.random() * 3}s`;
+            particleContainer.appendChild(particle);
+        }
+
+        // Memory Matching Game
+        const gameContainer = document.getElementById('gameContainer');
+        const gameMessage = document.getElementById('gameMessage');
+        const movesDisplay = document.getElementById('moves');
+        const currentLevelDisplay = document.getElementById('currentLevel');
+        
+        let cards = [];
+        let flippedCards = [];
+        let matchedPairs = 0;
+        let moves = 0;
+        let isProcessing = false;
+        
+        // Icons for the game cards
+        const icons = [
+            'fas fa-laptop-code', 'fas fa-microchip', 'fas fa-shield-alt', 
+            'fas fa-brain', 'fas fa-bug', 'fas fa-calculator', 
+            'fas fa-chalkboard-teacher', 'fas fa-palette'
+        ];
+    </script>
+</body>
+</html>

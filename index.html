@@ -8,12 +8,38 @@
     <meta name="theme-color" content="#ffffff">
     <title>Millefeuille Dev</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="particle-container" id="particleContainer"></div>
+    <div id="hackerWarning" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+  background: black; color: red; padding: 20px; border: 2px solid red; z-index: 9998; 
+  font-family: monospace; font-size: 24px; text-align: center; display: none;">
+  
+  <div style="margin-bottom: 20px;">
+    <i class="fas fa-exclamation-triangle" style="font-size: 64px;"></i>
+  </div>
+  
+  <h2 style="margin-bottom: 10px; color: #ff4444;">WARNING: HACKER MODE DETECTED</h2>
+  <p style="margin-bottom: 20px;">Do NOT press <span style="background: yellow; padding: 2px;">Ctrl + Alt + H</span></p>
+  <p style="margin-bottom: 20px;">This action will initiate a system override</p>
+  
+  <div id="warningAnimation" style="height: 50px; margin: 20px auto; position: relative;">
+    <!-- Animation will be added here -->
+  </div>
+  
+  <div style="display: flex; justify-content: center; gap: 20px;">
+    <button id="warningAcknowledge" style="padding: 10px 20px; background: green; color: white; border: none; cursor: pointer;">
+      Acknowledge Warning
+    </button>
+    <button id="warningDismiss" style="padding: 10px 20px; background: gray; color: white; border: none; cursor: pointer;">
+      Dismiss
+    </button>
+  </div>
+</div>
+
     
     <!-- Audio Player -->
     <audio id="bgMusic" loop>
@@ -21,6 +47,69 @@
     </audio>
     <div class="music-control" id="musicControl">
         <i class="fas fa-music"></i>
+    </div>
+
+    <!-- Modified Vertical Task Bar -->
+    <div class="vertical-task-bar">
+        <!-- Home -->
+        <div class="task-bar-item">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                <div class="task-bar-tooltip">
+                    <p>Home</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Discord -->
+        <div class="task-bar-item">
+            <a href="discord.html">
+                <i class="fab fa-discord"></i>
+                <div class="task-bar-tooltip">
+                    <p>Discord: r/millefeuille</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Reddit -->
+        <div class="task-bar-item">
+            <a href="reddit.html">
+                <i class="fab fa-reddit-alien"></i>
+                <div class="task-bar-tooltip">
+                    <p>Reddit: r/millefeuille</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Projects Timeline -->
+        <div class="task-bar-item">
+            <a href="projects-timeline.html">
+                <i class="fas fa-project-diagram"></i>
+                <div class="task-bar-tooltip">
+                    <p>Projects Timeline</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- My Story -->
+        <div class="task-bar-item">
+            <a href="my-story.html">
+                <i class="fas fa-scroll"></i>
+                <div class="task-bar-tooltip">
+                    <p>My Story</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Buy Me a Millefeuille -->
+        <div class="task-bar-item">
+            <a href="buy-me-a-millefeuille.html">
+                <i class="fas fa-coffee"></i>
+                <div class="task-bar-tooltip">
+                    <p>Buy Me a Millefeuille</p>
+                </div>
+            </a>
+        </div>
     </div>
 
     <!-- Main Profile Section -->
@@ -673,6 +762,296 @@
         
         // Start the first game automatically
         window.addEventListener('load', startNewGame);
+
+        
+// Warning Animation
+function showWarning() {
+  const warning = document.getElementById('hackerWarning');
+  const animationContainer = document.getElementById('warningAnimation');
+  
+  // Create pulsating effect
+  warning.style.display = 'block';
+  
+  // Add pulsating border animation
+  let pulseInterval;
+  function startPulse() {
+    let opacity = 1;
+    pulseInterval = setInterval(() => {
+      opacity = opacity === 1 ? 0.3 : 1;
+      warning.style.border = `2px solid rgba(255, 0, 0, ${opacity})`;
+    }, 500);
+  }
+  
+  // Add warning text animation
+  const warningText = document.createElement('div');
+  warningText.style.fontSize = '18px';
+  warningText.style.color = '#ff4444';
+  warningText.style.animation = 'warningTextPulse 1.5s infinite';
+  warningText.textContent = 'SYSTEM WARNING: UNAUTHORIZED ACCESS DETECTED';
+  animationContainer.appendChild(warningText);
+  
+  // Add CSS animation
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes warningTextPulse {
+      0% { opacity: 0.3; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 0.3; transform: scale(0.9); }
+    }
+  `;
+  document.head.appendChild(style);
+  
+  startPulse();
+  
+  // Warning buttons functionality
+  document.getElementById('warningAcknowledge').addEventListener('click', function() {
+    clearInterval(pulseInterval);
+    warning.style.display = 'none';
+  });
+  
+  document.getElementById('warningDismiss').addEventListener('click', function() {
+    clearInterval(pulseInterval);
+    warning.style.display = 'none';
+  });
+}
+
+// Show warning when page loads
+window.addEventListener('load', function() {
+  setTimeout(showWarning, 3000); // Show warning 3 seconds after page load
+});
+
+
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && e.altKey && e.key === 'h') {
+    activateAdvancedHackerMode();
+  }
+});
+
+function activateAdvancedHackerMode() {
+  const overlay = document.createElement('div');
+  overlay.id = 'advancedHackerModeOverlay';
+  
+  // Create matrix rain effect
+  createMatrixRain(overlay);
+  
+  // Add scanning line with glitch effect
+  addScanningLine(overlay);
+  
+  const hackerContainer = document.createElement('div');
+  hackerContainer.className = 'hacker-container';
+  hackerContainer.style.position = 'absolute';
+  hackerContainer.style.top = '50%';
+  hackerContainer.style.left = '50%';
+  hackerContainer.style.transform = 'translate(-50%, -50%)';
+  
+  const titleBar = document.createElement('div');
+  titleBar.className = 'title-bar';
+  titleBar.innerHTML = 'TERMINAL - HACKER MODE';
+  
+  const terminalContent = document.createElement('div');
+  terminalContent.className = 'terminal-content';
+  
+  const commandPrompt = document.createElement('div');
+  commandPrompt.className = 'command-prompt';
+  
+  terminalContent.innerHTML = `
+    ┌─────────────────────────────────────────────────────────────────────────────┐
+    │                                                                             │
+    │  ██████╗  ██████╗███████╗     ██╗███╗   ██╗███████╗███████╗██████╗ ███████╗ │
+    │  ██╔══██╗██╔════╝██╔════╝    ████║████╗  ██║██╔════╝██╔════╝██╔══██╗██╔════╝ │
+    │  ██████╔╝██║     █████╗      ╚██╔╝██╔██╗ ██║█████╗  █████╗  ██████╔╝█████╗   │
+    │  ██╔═══╝ ██║     ██╔══╝       ██║ ██║╚██╗██║██╔══╝  ██╔══╝  ██╔══██╗██╔══╝   │
+    │  ██║     ╚██████╗███████╗     ██║ ██║ ╚████║███████╗███████╗██║  ██║███████╗ │
+    │  ╚═╝      ╚═════╝╚══════╝     ╚═╝ ╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝ │
+    │                                                                             │
+    │  =============================================                               │
+    │  =              HACKER MODE ACTIVATED            =                           │
+    │  =============================================                               │
+    │                                                                             │
+    │  SYSTEM BOOT SEQUENCE INITIATED...                                          │
+    │                                                                             │
+    │  [##########] 100%                                                          │
+    │                                                                             │
+    │  WELCOME, MILLEFEUILLE                                                      │
+    │                                                                             │
+    │  DETECTED SKILLS:                                                           │
+    │   - Advanced Penetration Testing                                            │
+    │   - Network Security Analysis                                               │
+    │   - Reverse Engineering                                                     │
+    │   - Exploit Development                                                     │
+    │   - IoT Device Hacking                                                      │
+    │   - Cloud Security                                                          │
+    │                                                                             │
+    │  ACHIEVEMENTS:                                                              │
+    │   - Discovered 20+ critical vulnerabilities for major companies             │
+    │   - Top 1% on LeetCode with 500+ solved problems                           │
+    │   - Certified Ethical Hacker (CEH)                                          │
+    │   - Offensive Security Certified Professional (OSCP)                         │
+    │   - AWS Certified Security Specialist                                       │
+    │                                                                             │
+    │  CURRENT ACTIVITY:                                                          │
+    │   > Scanning network...                                                     │
+    │   > Analyzing system vulnerabilities...                                     │
+    │   > Monitoring for threats...                                               │
+    │                                                                             │
+    └─────────────────────────────────────────────────────────────────────────────┘
+
+    [user@hacker-mode ~]$ 
+  `;
+  
+  hackerContainer.appendChild(titleBar);
+  hackerContainer.appendChild(terminalContent);
+  hackerContainer.appendChild(commandPrompt);
+  overlay.appendChild(hackerContainer);
+  document.body.appendChild(overlay);
+  
+  let inputText = '';
+  
+  document.addEventListener('keydown', function handleCommands(e) {
+    if (document.getElementById('advancedHackerModeOverlay')) {
+      if (e.key === 'Escape') {
+        document.body.removeChild(overlay);
+        document.removeEventListener('keydown', handleCommands);
+        return;
+      }
+      
+      if (e.key === 'Enter') {
+        const command = inputText.trim().toLowerCase();
+        inputText = '';
+        
+        let response = '';
+        
+        switch(command) {
+          case 'ls':
+            response = 'files: resume.pdf  portfolio  projects';
+            break;
+          case 'whoami':
+            response = 'millefeuille - Ethical Hacker & Full Stack Developer';
+            break;
+          case 'scan network':
+            response = 'Scanning...\nFound 3 active devices\n192.168.1.1 - Router\n192.168.1.10 - Windows PC\n192.168.1.20 - Linux Server';
+            break;
+          case 'help':
+            response = 'Available commands:\n  ls          - List directory contents\n  whoami      - Display current user\n  scan network - Scan local network\n  system info  - Display system information\n  hacking tools - List available tools\n  achievements - Show achievements\n  exit         - Return to normal mode';
+            break;
+          case 'system info':
+            response = 'System Information:\nOS: Linux Ubuntu 22.04 LTS\nKernel: 5.15.0-76-generic\nUptime: 45 days\nMemory: 16GB RAM\nStorage: 1TB SSD';
+            break;
+          case 'hacking tools':
+            response = 'Loaded Hacking Tools:\n- Metasploit Framework\n- Nmap Advanced Scanner\n- Wireshark Packet Analyzer\n- Burp Suite Professional\n- John the Ripper\n- Hashcat\n- SQLmap\n- Hydra';
+            break;
+          case 'achievements':
+            response = 'Achievements:\n- Discovered 20+ critical vulnerabilities\n- Top 1% on LeetCode with 500+ solved problems\n- Certified Ethical Hacker (CEH)\n- Offensive Security Certified Professional (OSCP)\n- AWS Certified Security Specialist';
+            break;
+          case 'exit':
+            document.body.removeChild(overlay);
+            document.removeEventListener('keydown', handleCommands);
+            return;
+          default:
+            response = 'command not found: ' + command;
+            break;
+        }
+        
+        terminalContent.innerHTML += response + '\n[user@hacker-mode ~]$ ';
+        terminalContent.scrollTop = terminalContent.scrollHeight;
+      } else if (e.key === 'Backspace') {
+        inputText = inputText.slice(0, -1);
+        commandPrompt.innerHTML = '[user@hacker-mode ~]$ ' + inputText + '<span class="cursor"></span>';
+      } else if (e.key.length === 1) {
+        inputText += e.key;
+        commandPrompt.innerHTML = '[user@hacker-mode ~]$ ' + inputText + '<span class="cursor"></span>';
+      }
+    }
+  });
+  
+  function createMatrixRain(parent) {
+    const matrixContainer = document.createElement('div');
+    matrixContainer.style.position = 'absolute';
+    matrixContainer.style.top = '0';
+    matrixContainer.style.left = '0';
+    matrixContainer.style.width = '100%';
+    matrixContainer.style.height = '100%';
+    matrixContainer.style.pointerEvents = 'none';
+    matrixContainer.style.zIndex = '1';
+    
+    const columns = [];
+    const cols = Math.floor(window.innerWidth / 10);
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@#$%^&*()_+{}|:"<>?[]\\;,./`~';
+    
+    for (let i = 0; i < cols; i++) {
+      columns[i] = 0;
+      const column = document.createElement('div');
+      column.style.position = 'absolute';
+      column.style.left = `${i * 10}px`;
+      column.style.top = '0';
+      column.style.fontSize = '14px';
+      column.style.fontFamily = 'monospace';
+      matrixContainer.appendChild(column);
+    }
+    
+    function matrixRain() {
+      for (let i = 0; i < cols; i++) {
+        if (Math.random() > 0.97) {
+          columns[i] = Math.floor(Math.random() * 15) + 5;
+        }
+        
+        const column = matrixContainer.children[i];
+        column.innerHTML = '';
+        
+        for (let j = 0; j < columns[i]; j++) {
+          const char = document.createElement('span');
+          char.textContent = chars.charAt(Math.floor(Math.random() * chars.length));
+          char.style.position = 'relative';
+          char.style.top = `${j * 15}px`;
+          char.style.opacity = j < columns[i] - 5 ? 1 : (j - (columns[i] - 5)) / 5;
+          char.style.color = j === columns[i] - 1 ? '#0f0' : '#0c0';
+          column.appendChild(char);
+        }
+      }
+      
+      requestAnimationFrame(matrixRain);
+    }
+    
+    matrixRain();
+    
+    parent.appendChild(matrixContainer);
+  }
+  
+  function addScanningLine(parent) {
+    const scanLine = document.createElement('div');
+    scanLine.style.position = 'absolute';
+    scanLine.style.top = '0';
+    scanLine.style.left = '0';
+    scanLine.style.width = '100%';
+    scanLine.style.height = '2px';
+    scanLine.style.backgroundColor = 'green';
+    scanLine.style.zIndex = '1';
+    parent.appendChild(scanLine);
+    
+    function scanAnimation() {
+      let position = -20;
+      const interval = setInterval(() => {
+        position += 3;
+        scanLine.style.top = `${position}px`;
+        if (position > window.innerHeight) {
+          position = -20;
+        }
+      }, 15);
+      
+      document.addEventListener('keydown', function exitHackerMode(e) {
+        if (e.key === 'Escape') {
+          clearInterval(interval);
+          document.body.removeChild(overlay);
+          document.removeEventListener('keydown', exitHackerMode);
+        }
+      });
+    }
+    
+    scanAnimation();
+  }
+}
+
+
     </script>
 </body>
 </html>
